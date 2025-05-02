@@ -1,0 +1,3 @@
+release/*
+!release/.gitkeep
+# Ignore all files in the release directory except .gitkeep

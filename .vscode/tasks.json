@@ -1,0 +1,62 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "C/C++: g++",
+		"command": "/usr/bin/g++",
+		"args": [
+		  "-fdiagnostics-color=always",
+		  "-g",
+		  "-Wall",
+		  "-std=c++11",
+		  "${file}",
+		  "-o",
+		  "${workspaceFolder}/release/${fileBasenameNoExtension}"
+		],
+		"options": {
+		  "cwd": "${fileDirname}"
+		},
+		"problemMatcher": ["$gcc"],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"detail": "编译器: /usr/bin/g++"
+	  },
+	  {
+		"label": "Run Executable",
+		"type": "shell",  // 必须指定为 "shell" 或 "process"
+		"command": "${workspaceFolder}/release/${fileBasenameNoExtension}",
+		"dependsOn": ["C/C++: g++"],  // 可选：确保先编译再运行
+		"group": {
+		  "kind": "none",  // 不设为默认任务
+		  "isDefault": false
+		},
+		"presentation": {
+		  "echo": true,
+		  "reveal": "always",
+		  "focus": false,
+		  "panel": "shared",
+		  "showReuseMessage": true,
+		  "clear": true
+		},
+		"problemMatcher": []
+	  },
+	  {
+		"label": "Build & Run",
+		"dependsOn": [
+		  "C/C++: g++",
+		  "Run Executable"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": [],
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "shared"
+		}
+	  }
+	]
+  }
