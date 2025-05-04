@@ -2,6 +2,7 @@
 	"version": "2.0.0",
 	"tasks": [
 	  {
+		"type" : "cppbuild",
 		"label": "C/C++: g++",
 		"command": "/usr/bin/g++",
 		"args": [
@@ -9,7 +10,8 @@
 		  "-g",
 		  "-Wall",
 		  "-std=c++11",
-		  "${file}",
+		  // "${file}", //只编译文件本身
+		  "${fileDirname}/*.cpp", //编译当前目录下所有cpp文件
 		  "-o",
 		  "${workspaceFolder}/release/${fileBasenameNoExtension}"
 		],
