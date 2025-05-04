@@ -19,6 +19,8 @@ void thread_foo()
     std::thread t(&A::bar, a); // 创建线程，传递成员函数和对象
     t.join(); // 等待线程结束
 
+
+
 }
 
 int main()
