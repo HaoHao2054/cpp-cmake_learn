@@ -9,7 +9,7 @@
 		  "-fdiagnostics-color=always",
 		  "-g",
 		  "-Wall",
-		  "-std=c++11",
+		  "-std=c++14",
 		  // "${file}", //只编译文件本身
 		  "${fileDirname}/*.cpp", //编译当前目录下所有cpp文件
 		  "-o",
