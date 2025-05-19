@@ -1,0 +1,3 @@
+/home/hao/cpp-cmake_learn/cmake_projects/find_demo/build/CMakeFiles/find_demo.dir
+/home/hao/cpp-cmake_learn/cmake_projects/find_demo/build/CMakeFiles/edit_cache.dir
+/home/hao/cpp-cmake_learn/cmake_projects/find_demo/build/CMakeFiles/rebuild_cache.dir
